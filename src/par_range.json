@@ -1,0 +1,218 @@
+// Parameter ranges for spring phenology models
+{
+    // The linear regression model with preseason mean temperature
+    "LIN": {
+        "t1": {
+            "init": 100,
+            "lower": 1,
+            "upper": 365
+        },
+        "t2": {
+            "init": 150,
+            "lower": 1, 
+            "upper": 365
+        }
+    },
+    // The Thermal Time model
+    "ThermalTimeModel": {
+        "t0": {
+            "init": 12,
+            "lower": 1,
+            "upper": 365
+        },
+        "T_base": {
+            "init": -3,
+            "lower": -5,
+            "upper": 10
+        },
+        "F_crit": {
+            "init": 500,
+            "lower": 0,
+            "upper": 2000
+        }
+    },
+    "ParallelModel": {
+        "t0": {
+            "init": 50,
+            "lower": 1,
+            "upper": 365
+        },
+        "t0_chill": {
+            "init": 12,
+            "lower": 1,
+            "upper": 365
+        },
+        "T_base": {
+            "init": 0,
+            "lower": -5,
+            "upper": 10
+        },
+        "T_opt": {
+            "init": 1,
+            "lower": -5,
+            "upper": 10
+        },
+        "T_min": {
+            "init": -1,
+            "lower": -5,
+            "upper": 10
+        },
+        "T_max": {
+            "init": 5,
+            "lower": 0,
+            "upper": 15
+        },
+        "C_min": {
+            "init": 0.1,
+            "lower": 0,
+            "upper": 1
+        },
+        "F_crit": {
+            "init": 10,
+            "lower": 0,
+            "upper": 2000
+        },
+        "C_req": {
+            "init": 12,
+            "lower": 0,
+            "upper": 350
+        }
+    },
+    "SequentialModel": {
+        "t0": {
+            "init": 50,
+            "lower": 1,
+            "upper": 365
+        },
+        "t0_chill": {
+            "init": 12,
+            "lower": 1,
+            "upper": 365
+        },
+        "T_base": {
+            "init": 0,
+            "lower": -5,
+            "upper": 10
+        },
+        "T_opt": {
+            "init": 1,
+            "lower": -5,
+            "upper": 10
+        },
+        "T_min": {
+            "init": -1,
+            "lower": -5,
+            "upper": 10
+        },
+        "T_max": {
+            "init": 5,
+            "lower": 0,
+            "upper": 15
+        },
+        "F_crit": {
+            "init": 10,
+            "lower": 0,
+            "upper": 2000
+        },
+        "C_req": {
+            "init": 12,
+            "lower": 0,
+            "upper": 350
+        }
+    },
+    "AlternatingModel": {
+        "t0": {
+            "init": 50,
+            "lower": 1,
+            "upper": 365
+        },
+        "T_base": {
+            "init": 0,
+            "lower": -5,
+            "upper": 10
+        },
+        "a": {
+            "init": 10,
+            "lower": 0,
+            "upper": 500
+        },
+        // "b": {
+        //     "init": 10,
+        //     "lower": 0,
+        //     "upper": 1000
+        // },
+        // "c": {
+        //     "init": 1,
+        //     "lower": 0,
+        //     "upper": 5
+        // }
+        "b": {
+            "init": 10,
+            "lower": 0,
+            "upper": 5000
+        },
+        "c": {
+            "init": -0.0005,
+            "lower": -1,
+            "upper": 0
+        }
+    },
+    // The Unified Model. [Chuine 2000]
+    "UnifiedModel": {
+        // Chilling accumulated days
+        "tc": { 
+            "init": 150,
+            "lower": 1,
+            "upper": 365
+        },
+        // sigmoid function chilling parameter a
+        "a_c": {
+            "init": 0.5,
+            "lower": 0,
+            "upper": 10
+        },
+        // sigmoid function chilling parameter b
+        "b_c": {
+            "init": 3,
+            "lower": -10,
+            "upper": 10
+        },
+        // sigmoid function chilling parameter c
+        "c_c": {
+            "init": 4,
+            "lower": -20,
+            "upper": 5
+        },
+        // sigmoid function forcing parameter b
+        "b_f": {
+            "init": -0.4,
+            "lower": -100,
+            "upper": 0
+        },
+        // sigmoid function forcing parameter c
+        "c_f": {
+            "init": 10,
+            "lower": 0,
+            "upper": 20
+        },
+        // F* parameter w
+        "w": {
+            "init": 9,
+            "lower": 0,
+            "upper": 500
+        },
+        // F* parameter k
+        "k": {
+            "init": -0.5,
+            "lower": -5,
+            "upper": 0
+        },
+        // C*
+        "C_req": {
+            "init": 7,
+            "lower": 10,
+            "upper": 350
+        }
+    }
+}
+
